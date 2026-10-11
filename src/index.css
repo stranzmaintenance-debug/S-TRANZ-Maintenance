@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-dark: #070b12;
+    --bg-surface: #0d1527;
+    --bg-card: #121c33;
+    --border-color: #1e2d4d;
+    --primary-navy: #152238;
+    --accent-orange: #ea580c;
+    --accent-orange-hover: #c2410c;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #070b12;
+    color: #f1f5f9;
+  }
+
+  /* Monospace for numbers/currencies */
+  .font-mono-numbers {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090e18;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Print styling for A4 export */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .printable-area {
+    background: #ffffff !important;
+    color: #000000 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .printable-area * {
+    color: #0f172a !important;
+    border-color: #cbd5e1 !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+  .printable-area thead th {
+    background-color: #f1f5f9 !important;
+    color: #0f172a !important;
+    font-weight: 700 !important;
+  }
+  @page {
+    size: A4 landscape;
+    margin: 12mm;
+  }
+  table {
+    page-break-inside: auto;
+  }
+  tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+}

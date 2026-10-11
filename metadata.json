@@ -1,0 +1,6 @@
+{
+  "name": "S TRANZ LOGISTIC MAINTENANCE",
+  "description": "Comprehensive fleet maintenance, driver management, expense tracking, and transport logistics operations platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
